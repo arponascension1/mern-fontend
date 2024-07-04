@@ -16,11 +16,9 @@ function Login() {
     const disabledBnt = useSelector((state) => state.auth.disableBtn);
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            await dispatch(login({email, password}));
-            navigate('/');
-        }catch (e){
-        }
+            await dispatch(login({email, password})).then((s) =>{
+                navigate('/dashboard');
+            }).catch((err) =>{});
 
     };
     if(isAuthenticated){

@@ -2,7 +2,7 @@
   "name": "fontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://mern-by-arpon.vercel.app/",
+  "proxy": "https://mern-by-arpon.vercel.app",
   "dependencies": {
     "@redux-devtools/extension": "^3.3.0",
     "@reduxjs/toolkit": "^2.2.5",
