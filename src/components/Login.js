@@ -16,10 +16,11 @@ function Login() {
     const disabledBnt = useSelector((state) => state.auth.disableBtn);
     const handleSubmit = async (e) => {
         e.preventDefault();
-            await dispatch(login({email, password})).then((s) =>{
-                navigate('/dashboard');
-            }).catch((err) =>{});
+        try{
+            await dispatch(login({email, password})) 
+        }catch (e) {
 
+        }
     };
     if(isAuthenticated){
         return  <Navigate to='/dashboard'/>
